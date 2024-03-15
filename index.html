@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rabindra Sangeet</title>
+</head>
+<body>
+    <h1>Pick a Rabindra Sangeet randomly:</h1>
+    <p id="randomLine"></p>
+    <a id="youtubeLink" href="#" target="_blank">Search on YouTube</a>
+    <br>
+    <button onclick="generateRandomSong()">One More Time</button>
+
+    <script>
+        var lines = `Amar Sonar Bangla
+Amar Moner Koner Baire
+Gahana Kusumakunja Majhe
+Amar Matha Nato Kore Dao
+Majhe Majhe Taba Dekha Pai
+Jodi Tare Nai Chini Go
+Aaj Jyotsna Raate
+Badal Baul Bajay Re Ektara
+Amar Sakal Raser Dhara
+Amare Jadi Jagale Aaji
+Aha Aji E Basante
+Ogo Nadi Apan Bege Pagal
+Mamo Chitte Niti Nritye
+I Know You
+Hare Re Re Re Re
+Amar Hridoy Tomar
+Kuch Din To Baso Meri Aankhon Mein
+Alo Amar Alo Ogo-Rakhi Sarkar
+Birasho Din Birolo Kaj
+Eso Nipobone
+De Tora Amay Nutan Kare De
+Eso Shyamolo Sundaro
+Tomay Natun Kore Pabo Bole
+Keya Na Mila
+Amar Mallika Bone
+Tomar Khola Haowa
+Tabu Mone Rekho
+Amar Majhe Tomari Maya
+Ami Bhoy Korbo Na
+Amar Paran Jaha Chay
+Sangsar Jabe Mon Kere Loy
+Sakal Belar Aloy Baje
+Ami Chanchaal Hey
+Klanti Amar Kshama Karo Prabhu
+Shudhu Tomar Bani Noy Go
+Kar Milan Chao Birahi
+Nrityer Tale Tale
+Holo Na Lo, Holo
+Ore Nutan Juger Bhore
+Aaji Jharo Jharo Mukharo Badarodine
+Aaj Tomare Dekhte Elem
+Jadi Prem Dile Na Prane
+Shuni Khaney Khaney Mone Mone
+Himer Raate Oi Gaganer Deepgulire
+Kshata Jato Kshati Jato
+Madhur Madhur Dhwani Baje
+Ki Gabo Ami
+Prabhat-Alore Mor Kandaye Gele
+Tumi Ki Keboli Chhobi
+Amay Bandhbe Jodi
+Aaji Barishan Mukharito Srabanaraati
+Oyi Bhubanmonmohini
+Hey Khaniker Atithi
+Dhara Diyechhigo Ami Akasher Pakhi
+Amar Bela Je Jay
+Dole Dole Dole Premer Dolon
+He Mor Debota
+Tum Keya Ho Ek Chhabi
+Bela Gelo Tomar Path Cheye
+Jagorane Jaay Bibhabari
+Tomar Mohan Rupe
+Shraboner Dharar Mato
+Dekha Pelam Phalgune
+Keno Chokher Jale Bhijiye Dilem Na.
+Badal Dhara Holo Sara
+Diner Belay Banshi
+Amar Jabar Belay Pichhu Dake
+Bipul Taranga Re
+Aaj Pratham Phuler Pabo
+Din Pore Jay Din
+Amar Jedin Bheshe Gechhe
+Peyechhi Chhuti, Biday Deho Bhai
+Sarthak Janam Amar
+Amare Bandhbi Tora
+Tumi Rabe Nirabe
+Aapan Hote Bahir Hoye
+Vyom Vyom Me
+Probhu Aaji Tomar
+Ei Korechho Bhalo Nithur He
+Charan Rekha Tabo Je Pathe
+Memories Of Those
+Amar Jibanpatra
+Tomar Beenay Gaan Chhilo
+Ami Nishidin Tomai
+Surya Taaron Se
+Bimal Anande Jago Re
+Prabhu Amar, Priyo Amar
+Anandadhara Bohichhe Bhubane
+Jamini Na Jete Jagale Naa Keno
+Marubijayer Ketan Urao
+Aloy Alokmoy Kore
+Tere Asim Mey
+Apon Hote Bahir
+Gaganer Thaale
+Amare Dak Dilo Ke
+Jodi Jantem Amar Kiser Byatha
+Tumi Achho Kon Para
+Dui Hridayer Nadi
+Anek Paoar Majhe Majhe
+Amareo Karo Marjana
+He Khoniker Atithi
+Tumi Je Amare Chao
+O Asharher Purnima Amar
+Ami Tomar Sange Bendhechhi
+Aamar Later Pratham Mukul
+Matir Pradipkhani
+Ke Bosile Aaji
+Ore Grihabasi
+Vyed Upanishad Darshan
+Kato Katha Tare Chhilo Bolite
+Hare Re Re Re Re
+Tumi Sandhya Meghamala
+Oi Je Jharer Megher Kole
+Aaj Bari Jhare Jharo Jharo
+Sakali Furalo Swapan Pray
+Ei Lobhinu Sanga Tabo
+Sedin Dujane Dulechhinu Bone
+Tomar Holo Shuru
+Amareo Karo Marjona
+Ami Tomai Jata Suniyechhilam Gaan
+Parabasi Chole Eso
+Baishakh He Mouni Tapas
+Megh Bolechhe Jabo Jabo
+Amar Praner Majhe Sudha Achhe
+Banglar Mati, Banglar Jal
+Amar Paran Loye
+All The Sky Over
+Aaji Jharer Raate Tomar Abhisaar
+Amar Raat Pohalo
+Ebar Biday Belar Sur
+Dakilo More Jagar Sathi
+Mamo Chitte
+Amar Byatha Jakhan Ane Amay
+Amrapali
+Ashrunadir Sudur Pare
+Megher Pore Megh Jomechhe
+Mone Rabe Ki Na Rabe Amare
+Pratham Juger
+Duare Dao More
+Bal Golap More Bal
+Sajabo Tomare Hey
+Dhaye Jeno Mor Shokol Bhalobasha
+Aaj Tarai Tarai Deepta
+Kotha Baire Dure Jay Re Ure
+Phul Bole Dhanno Ami
+More Bare Bare Phirale
+Shokhi Bhabona Kahare Boley
+Dekha Na Dekhay Mesha
+Basante Phul Ganthlo Amar
+Hey Akash Bihari Nirad
+Biraha Madhur Holo Aaji Madhuraate
+Mor Swapan-Tarir Ke Tui Neye
+Elem Natun Deshe
+Keno Amay Pagal Kore Jas
+Ore Majhi Ore Amar
+Taro Taro Hori Dinjane
+Dukkha Dur Korile
+Khule De Tarani
+Utal Dharay Badal Jhare
+Amar Din Phuralo
+Oi Bujhi Banshi Baje
+Keta Na Somay
+E Moho-Abarana
+Tomay Natun Kare Pabo Bole
+Jadi Tare Nai Chini Go
+Kadamberi Kanan
+Danrao Amar Ankhir Aage
+No Nay Oh Never
+Tumi Ki Go Pita Amader
+Emon Dine Tare Bala Jay
+Bimalo Anande Jago Re
+Chiro Bondhu Chiro Nirbhar Chiro Shanti
+O Gan Aar Gaas Ne
+Basante Ki Shudhu Kebal
+Kantabonbiharini Sur-Kana Debi
+Dubi Amrito Pathare
+Chaitrapabane Mamo Chittobone
+Na Go Ei Je Dhula Amar
+Amar Abhimaner Badale Aaj
+Tumi Robe Nirobe
+Je Phul Jhare
+Karna-Kunti Sangbad
+Pagol Je Tui Kantha Bhore
+Ahwan Aasilo Mahotsabe
+Amar Bone Bone Dharlo Mukul
+Amra Lakkhichharar Dal
+Badal Dhara Holo Sara
+Jodi Tor Dak Shune Keu
+Eso Shyamala Sundar
+Anantasagarmajhe
+Ami Nishidin Tomai Bhalobasi
+More Bare Bare Phirale
+Tumi Rabe Nirabe
+Khelar Chhale Sajiye Amar Gaaner Bani
+Tomar Asime Pranmon Loye
+O Je Mane Naa Mana
+Je Chhilo Amar Swapanacharini
+Balo To Eibarer Mato
+Diner Belay Banshi Tomar
+Dakhin Hawoa Jago Jago
+Pathe Chole Jete Jete
+Amare Bandhbi Tora
+Chhinno Shikol
+O Amar Dhyaneri Dhan
+Nibir Megeher Chhayay
+Shudhu Jaoya Aasa
+For You Its A
+E Bharater Rakha Nitya Prabhu
+Amar Matha Nata Kare Dao Hey
+Jagorane Jaay Bibhabari
+Amare Ke Nibi Bhai
+Puratanke Biday Dile Na Je
+Amar Ki Bedona Se Ki Jano
+Bajilo Kahar Beena
+Ogo Kangal, Amare Kangal Karechho
+Sei Bhalo Sei Bhalo
+Agnibeena Bajao Tumi Kemon Kare
+Shiuli Phota Phurolo Jei
+Baje Karun Sure
+Jodi Baran Karo Tobe Gahibo Na
+Sahasa Dalpala Tor Utala
+Ebar Bhasiye Dite Hobe
+Ki Name Deke Bolbo Tomake
+Tar Anta Nai Je
+Jatakhan Tumi Amay Basiye Rakho
+Ango Tor Kar Ki Achhe
+Bakul Gandhe Bonna Elo
+Tomay Amay Milan Hobe Bole
+Aaj Jyotsnaraate Sabai Gechhe Bon-E
+During The Day
+Amare Dak Dilo Ke
+Kachhe Taro Jai
+Sada Thako Anande
+Amar Milan Lagi Tumi
+Ami Kamon Koriya Janabo
+Aaj Taray Taray
+Chole Jay Mori Hay Basanter Din
+Mone Holo Periye Elem Antabeheen Path
+Tomay Chini Go Chini Go
+Megh Chhaye Sajal Baye
+Purno Chander Maya Aji Bhavana Amar
+Hriday Amar Oi Bujhi
+Pachhe Cheye Base
+Priye Tomar Dheki
+Sakhi Pratidin Hay
+Andhajane Deho Alo
+Emon Aar Kato Din
+Jethay Thake Sabar Adham
+Ami Rooper Tomai
+Ekoda Tumi Priye
+Ar Nahe, Ar Nai
+Bahire Bhul Hanbe Jakhan
+Dao Hey Amar Bhoy Bhenge Dao
+Charon Dhorite Diyo Go Amare
+Ohe Sundar Mori Mori
+Jage Nath Jochhanaraate
+Pagla Hawar Badol Dine
+Aaj Nabin Megher Sur Legechhe
+Jete Jodi Hoy Habe
+Mone Ki Dwidha Rekhe Gele
+Madhyadine Jobe Gaan
+Sei Purano Diner Katha
+With The Touchstone
+O Chand, Chokher Jaler Laglo Jowar
+Megher Kale Rod Hesechhe
+Buke Badhe Tui Danra Dekhi
+Amar Shesh Paranir Kori
+Amar Je Gaan
+Tomari Grihe Palita Snehe
+Tomarei Koriyachhi Jiboner Dhrubatara
+Ekhano Gelo Na Andhar
+Shrabaner Gaganer Gaay
+Desh Desh Nandita Kori
+Heri Aharaha Tomari Biraha
+Neel Anjanghana Punjachhayay
+Durer Bandhu Surer
+Chhutir Banshi Bajlo
+Fits Me Not
+Charan Rekha Tabo
+Pub Haowate Dey Dola
+Cloud Has Said
+Jodi Tare Nai Chini Go
+Oi Sagarer Dheuye Dheuye
+Khelaghar Bandhte Legechhi
+Ogo Swapnaswarupini
+Baro Bismoy Lage
+Dhora Diyechhi Go Ami
+Keno Re Ei Duar Tuku
+Mukha Khani Kara Malin
+Path Diye Ke Jaay Go Chole
+Tagore's Confidant
+Bone Emon Phul Phutechhe
+Amar Raat Pohalo
+Swapan Jodi Bhangile Rajaniprabhate
+Jete Dao Jete Dao Gelo Jara
+Tahare Aarati Kare
+Saphal Karo Hey Prabhu
+Gahana Raate Shravana Dhara
+Chitratan Hartan
+Eso Sharater Amal Mahima
+Hay Re Ore Jay Na Ki Jana
+Dekha Jodi Dile
+Kul Theke Mor Gaaner Tari
+Tumi Keman Kore Gaan Kara Hey Guni
+Amar Nishith Raater Badaldhara
+Jodi Tor Dak Shune Keu
+Badaldhara Holo Sara
+E Ki Labonye Purna Pran
+Shudhu Jaowa Aasa
+Ki Dibo Tomay
+Bahujuger Opar Hote
+Jiban Maroner Simana Chharaye
+Aar Nai Re Bela, Namlo Chhaya Dharanite
+Kamona Kori Ekante
+The Wedding Night
+Chitta Pipasita Re Geeta Sudhar Tore
+Tomar Bhuban-Jora
+Chhaya Ghanaiche
+O Chand Tomay Dola
+Pathik Hey
+Kar Jeno Ei Moner Bedan
+Aji Heri Sansar Amritomoy
+Aloke Kusum Na Diyo
+Diner Belay Banshi Tomar
+Shraban Tumi Batase Kar
+Tomari Gehe Palichho
+Mamo Mon-Upabone Chale Abhisare
+Jadi E Amar Hriday Duyar
+Mutual Admiration
+Aami Sansare Mon Diyechhinu
+Dekechhen Priyotamo
+Eso Amar Ghare
+Jatri Ami
+Taai Tomar Ananda Aamar Path
+Tomar Ei Madhuri Chhapiye Akash
+Bahire Bhul Bhanbe Jakhan
+Sakalbelar Aloy Baje
+Rajpurite Bajay Banshi
+O In This Moony
+E Bela Daak Porechhe
+He Mahajiban He Mahajiban
+Eso Eso Ogo Shyamachhaya
+Amaro Parano Jaha Chay
+Fagun Haoyay Haoyay Karechhi Je Dan
+Eenati Ee Bandham Yenatido
+Ei Korecho Bhalo
+Ami Takhan Chhilem Magan Gahan Ghumer Ghore
+Amal Dhabal Pale Legechhe
+Tumi Kemon Kore Gaan Karo Hey Guni
+Hey Madhabi Dwidha Keno
+Nitya Nabo Satya Tabo
+Ogo Shono Ke Bajaye
+Prasanta And Rani
+Now Tarry No More
+He Mahaprabalobali
+Nibir Amaa-Timir Hote
+Ke Bosile Aaji
+Je Kebal Paliye Beray
+Ogo Shephaliboner Moner Kamona
+Deko Na Amare Deko Na
+Amra Dujana Swarga Khelna
+Amar Jibanpatra Uchchhaliya
+Timir-Duar Kholo
+Fagun Haoyay Haoyay Rangey Rangey
+Keno Dhare Rakha O Je Jabe Chale
+Abelay Jadi Esechho Amar Bone
+Aji Kon Dhano Hote
+Haowa Lage Gaaner Paale
+Dharani Dure Cheye Keno Aaj
+Bedonay Bhore Giyeche Peyala
+Amar Abhimaner Badale Aaj
+Dukkher Barashay
+Maharaj Eki Sajhe
+Tomar Gopan Kathati
+Mamo Dukkher Sadhan
+Se Je Pashe Ese Bosechhilo
+Chaitrapabane Mamo Chittobone
+Tumi Amay Dekechhile
+Ei Sakalbelar Badal- Andhare
+Gaane Bhuban Bhoriye Debe
+Arupbeena Ruper Arale
+Ebar Rongiye Gelo
+Tor Apon Jane Chharbe Tore
+Chiro Bandhu Chiro Nirbhara
+Tomarei Koriyachhi Jiboner Dhrubatara
+Ei Udasi Haowar Pathe Pathe
+Nayan Chherey Gele Chole
+Renouncing Knighthood
+Srabana Megher Adhek Duar Oi Khola
+Sambhaal Rakhiyan
+Oi Re Tari Dilo Khule
+Ananda Royechhe Jaagi
+Amay Bolo Na Gaahite Bolo Na
+Aaji Barishanmukharita Shrabanraati
+Ashim Akashe Aganya Kirano
+Baro Bismoy Lage Heri Tomare
+Aaha Aji E Basante Eto Phul Phute
+Deep Nibe Gechhe Mamo
+Tarutale Chhinnobrinto Malotir Phul
+Pran Bhoriye Trisha Horiye
+Momo Chitte Niti Nritye
+Pagla Hawar Badol Dine
+Peyechhi Sandhano Tabo
+Swarupo Tanro Ke Jaane
+Tomar Beena Amar Monomajhe
+Ekhono Tare Chokhe Dekhini
+Bishwavidyatirthaprangan Karo
+Keno Re Etoi Jabar Twara
+Tomari Gehe Palichho Snehe
+Tabo Amal Parsharastabo Sheetal Shanto
+Amar Parano Jaha Chay
+Tar Hate Chhilo Hasir Phuler
+Chirodibasa Nobomadhuri
+Nibir Amaa Timir Hote
+Ki Ragini Bajale Hridaye
+Kobe Tumi Aasbe Bole
+Jokhon Porbe Na Mor
+Madhyadine Jobe Gaan
+Chokher Aloy Dekhechilem
+Pub Sagarer Paar Hote
+Kano Eli Re
+Dariye Achho Tumi
+Srabaner Dharar Mato
+Mamo Angane Swami
+Shono Tanro Sudhabani
+Oi Maraner Sagarpaare
+Amare Karo Jeevan Dan
+Aaj Aloker Ei Jharnadharay
+Esechhe Sakale Kato Aashe
+Eto Khala Noi
+Ei Shrabaner Buker Bhetor
+Kachhe Theke Dur Rachilo
+Tomari Sebako Karo He
+Bhalobese Sokhi
+Kotha Je Udhao Holo
+Ami Chini Go Chini Tomare
+Aji Jato Tara Tabo Akashe-Duet
+Amar Ekti Katha Banshi Jane
+Jagarane Jai Bibhabari
+Shudhu Tomarbani Noy Go
+Abar Jodi Ichhe Karo
+Sabe Mili Gaao Re
+Haay Re Ore Jaay Na Ki Jaana
+Banshi Ami Bajai Ni Ki
+Ami Tomaro Songe
+Tomar Khola Hawa
+Puspa Bone Pushpa Nahi
+Sab Dibi Ke
+Madhur, Tomar Shesh Je Na Pai
+Tahare Arati Kare
+Mayabonbiharini Horini
+Jodi Tor Daak Shune Keu Na Ase
+Bhange Mor Ghorer Chabi
+Amar Matha Nato Kore
+Bidhir Bandhan Katbe Tumi
+Amader Jatra Holo Shuru
+Kotobaro Bhebechhinu Apona Bhuliya
+Amar Bela Je Jay Sanjhbelate
+Anek Paoaar Majhe
+Jani Jani Holo
+Je Keho More Diyechho Sukh
+Tumi Rabe Nirabe
+Kotha Achho Probhu
+Boro Asha Kore Esechhi Go
+Vaigaasi Nilave
+Jagorane Jay Bibhabori
+Ami Chini Go Chini Tomare
+Tumi Je Surer Agun
+Ohe Jibanballabh
+Kache Jabe Chilo
+Oh Bangaru Rangulachilaka
+Sedin Dujane Dulechinu Bone
+Aaj Shrabaner Purnimate
+Dabotar Gras
+Kar Jeno Ei Moner Bedan
+Rodan Bhara E Basanta
+Aay Aay Re Pagal
+Aaji Bangladesher Hriday Hote
+Jodi Hay Jiban Puran Naii Holo
+Amar Sakal Dukher Pradip
+Tumi Amay Dekechile
+Amar Na-Bala Banir
+Nare Nare Nare Hobe Nare
+Amar Sonar Bangla Ami Tomay Bhalobasi
+Amar Bone Bone Dharlo Mukul
+Dei Mamae
+Chokher Aloy
+Durer O Bandhu
+Kato Katha Tare
+Aaj Jemon Kore
+Dukkha Je Tor Noy Re Chirantan
+Sapane Dohe Chinu Ki Mohe
+Kangal Amare Kangal Korecho
+Godhuli Gogone Meghe
+Mon Mor Megher Sangi
+Oh Mane Mane
+Tumi Hathat Haoay
+Dujane Dekha Holo
+Ore Bakul Parul
+Praner Khushir Tufan Utheche
+Tomar Preme Dhanya Karo Jare
+Amar Mon Mane Na
+Aha Tomar Sange Praner Khela
+Ami Swapone Royechi
+Chhinna Patar Sajai Tarani
+Ke Basile Aaji
+Durer Bandhu Surer Du Tire
+Amar Nishithrater Badal Dhara
+Aji Mamo Man Chahe Jibanbandhu Re
+Aguner Parashmoni
+Sedin Dujaney Dulechinu
+Amar Hiyar Majhe Lukiye-Chhile
+Prabhu Toma Lagi
+Sei To Basanta Fire Elo
+Amar Raat Pohalo Sharada Prate
+Nrityer Taale Taale
+Akash Bhora Surya Tara
+Edin Aaji Kon Ghore Go
+Ei Je Tomar Prem Ogo
+Keno Amay Paagal
+Ami Swapane Royechhi Bhor
+More Bare Bare Phirale
+Amar Matha Nato Kore Dao
+Sedin Dujane Dulechhinu Bone
+Ektuku Chhonwa Lage
+Aj Kichutei Jay Na Moner Bhar
+Pakhi Amar Nirer Pakhi
+Amar E Path
+Amar Moner Majhe
+Biraha Madhur Hlo Aaji
+Dhay Jeno Mor Sakal Bhalobasa
+Tumi Kon Pathe Je Ele Pathik
+Puttene Prema
+Aaji Jharo Jharo
+Singaar Ko Rehne Do
+Shesh Paranir
+Ore Nutan Juger Bhore
+Tor Aponjane
+Amar Dosar Je Jan Ogo Tare Ke Jane
+Sahasha Dalpala Tor
+Aji Tomay Abar Chai Shunibare
+Naa Bole Jay Pachhe Se
+Kenare Eto Jabar Twara
+Chhilo Je Paraner Andhakare
+Ore Sabdhani Pathik
+Aapni Abash Holi Tabe Bal Dibi Kaare
+Ki Gabo Ami Ki Sunabo
+Hey Mor Sandhya
+Chahiya Dekho Raser Srote
+Bajilo Kaahar Bina
+Dakhin Haoya Jago Jago
+Balo To Eibarer Mato
+Aami Chahite Eshechi
+Amar Nikhil Bhuban Haaralem
+Jani Jani Tumi Esechho E Pathe
+Phule Phule D0Le Dole
+Srabaner Dharar Mato
+Oi Shuni Jeno Charan Dwani
+Amare Karo Tomar Beena
+Bani Mor Nahi
+Tomar Maan Bole Chai Chai Go
+Tomra Ja Balo Tai Balo
+Je Din Sakal Mukul Galo Jhore
+Era Parke Aapan Kare
+Jamini Na Jete Jagale Na
+Ami Tomar Preme
+O Je Mane Na Mana
+Ei To Tomar Prem
+Amra Milechhi Aaj Mayer Dake
+Amare Ki Nibi
+Amar Mon Cheye Roy Mone Mone
+Nayana Bhashilo Jale
+Ami Sansare Mon Diyechhinu
+Ei Kathati Mone Rekho
+Tumi Kemon Kore Gaan Karo Hey Guni
+Tomar Khola Haowa
+Bhenge Mor Gharer Chabi
+Tumi Robe Nirobe
+Mama Chitte Niti Nritye
+Dur Deshi Shei Rakhal Chhele
+Sakhi Pratidin Haay Ese Phire Jaay Ke
+Shrabaner Gaganer Gay
+Jadi Hai Jeeban Puran Nai Holo
+He Mor Chitte Punya Teerthe
+Kar Banshi Nishi Bhore
+Amay Bandhbe Jadi Kajer Dore
+Andhajane Deha Alo
+Keno Amay Pagal Kare Jas
+Amar Ekti Katha Banshi Jane
+Akash Pore Sudhay Bhore
+Sakarun Benu Bajaye Ke Jay
+Ke Boleche Tomay Bodhu
+Kothay Aalo Kothay Aaro Aalo
+Basante Phul Ganthlo
+Kabe Ami Bahir Holem
+Ogo Sundaro, Ekada Ki Jani Kon Punyer
+Sedin Dujane Dulechinu Bone
+Jodi Tor Dak Shune
+E Ki Labonye Purnyo Pran
+Ami Chini Go Chini Tomare
+Aji Hote Sata Barsha Pare
+Sukhe Achhi Sukhe Achhi Sakha
+Tomar Dwar Kholar Dhwani
+Dhara Diyechhi Go Ami
+Oke Keno Kandali
+Mone Rabe Ki Na Rabe Amare
+Bhuban Jora Asankhani
+Roilo Bole Rakhle Kare
+Nai Nai Bhoy Habe Habe Joy
+Amar Raat Pohalo
+Indru Vantha Intha Mayakkam
+Kshamite Parilam Na
+Tomari Naam Bolbo
+Orey Chitra Rekha Dore
+Pub Sagarer Paar Hate
+Tare Dekhate Pari Ne Keno Pran
+Jeyo Na Jeyo Na Phire
+Mor Pathikere Bujhi Enechha Ebar
+Bajre Bajre Tomar Baaje Banshi
+Apon Hote Bahir Hoye Baire Dara
+Nisha Abasane Ke Dilo Gopane Aani
+Amar Mallikabone
+Darun Agnibane Re
+Katobar Bhebechhinu
+Kal Rater Bela Gaan Elo Mor Mane
+Ke Debe Chand Tomay Dola
+Ankhijal Muchhaile, Janani
+Akarane Akale Mor
+Maharaj Eki Saja Ele
+Amal Dhabal Pale Legeche
+Bhalobese Sakhi Nibhrite Jatane`;
+
+        var linesArray = lines.split('\n');
+
+        function generateRandomSong() {
+            var randomIndex = Math.floor(Math.random() * linesArray.length);
+            var randomLine = linesArray[randomIndex].trim();
+
+            var randomLineElement = document.getElementById('randomLine');
+            randomLineElement.textContent = randomLine;
+
+            var youtubeLinkElement = document.getElementById('youtubeLink');
+            var searchQuery = encodeURIComponent(randomLine + ' Rabindra Sangeet');
+            youtubeLinkElement.href = 'https://www.youtube.com/results?search_query=' + searchQuery;
+        }
+
+        // Initial random song generation
+        generateRandomSong();
+    </script>
+</body>
+</html>
