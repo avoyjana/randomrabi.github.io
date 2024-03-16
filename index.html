@@ -9,6 +9,8 @@
     <a id="youtubeLink" href="#" target="_blank">Search on YouTube</a>
     <br>
     <button onclick="generateRandomSong()">One More Time</button>
+    <br><br>
+    <div id="player"></div>
 
     <script>
         var lines = `Amar Sonar Bangla
@@ -643,6 +645,7 @@ Maharaj Eki Saja Ele
 Amal Dhabal Pale Legeche
 Bhalobese Sakhi Nibhrite Jatane`;
 
+        
         var linesArray = lines.split('\n');
 
         function generateRandomSong() {
@@ -655,6 +658,20 @@ Bhalobese Sakhi Nibhrite Jatane`;
             var youtubeLinkElement = document.getElementById('youtubeLink');
             var searchQuery = encodeURIComponent(randomLine + ' Rabindra Sangeet');
             youtubeLinkElement.href = 'https://www.youtube.com/results?search_query=' + searchQuery;
+
+            // Fetch video data using YouTube Data API
+            fetch('https://www.googleapis.com/youtube/v3/search?key=YOUR_API_KEY&q=' + searchQuery + '&part=snippet&type=video')
+            .then(response => response.json())
+            .then(data => {
+                if (data.items && data.items.length > 0) {
+                    var videoId = data.items[0].id.videoId;
+                    var playerDiv = document.getElementById('player');
+                    playerDiv.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></iframe>';
+                } else {
+                    console.log('No video found for the search query: ' + searchQuery);
+                }
+            })
+            .catch(error => console.error('Error fetching YouTube data:', error));
         }
 
         // Initial random song generation
